@@ -1,0 +1,36 @@
+{
+  "name": "Stripe Connect Dashboard Returns",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Stripe Connect Dashboard Returns by Gaurav Dadhania. A simple extension that converts the refund button in the Stripe dashboard to refund the entire charge when using Stripe connect and spliting payments between the platform and the connected account.",
+  "homepage_url": "http://twitter.com/GVRV",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "https://api.stripe.com/*",
+    "storage",
+    "tabs",
+    "webNavigation"
+  ],
+  "background": {
+    "scripts": ["src/background/bg.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://dashboard.stripe.com/*"
+      ],
+      "js": [
+        "js/jquery/jquery.min.js",
+        "src/inject/inject.js"
+      ]
+    }
+  ],
+  "options_ui": {
+    "page": "src/options/index.html",
+    "chrome_style": true
+  }
+}

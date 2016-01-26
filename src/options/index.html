@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stripe Connect Dashboard Returns</title>
+  <style>
+    body: { padding: 10px; }
+  </style>
+</head>
+
+<body>
+  <p>Please enter your Stripe account's Secret Keys to make the refund requests through the API. You can find your keys on the dashboard <a href="https://dashboard.stripe.com/account/apikeys" target="_blank">settings page</a>. You should enter the keys for the platform's Stripe account, not any of the connected Stripe accounts.</p>
+
+  <p>
+    <label>Test Secret Key</label>
+    <input type="text" id="test_api_key" />
+  </p>
+
+  <p>
+    <label>Live Secret Key</label>
+    <input type="text" id="live_api_key" />
+  </p>
+
+  <p>
+    <button id="save">Save</button>
+  </p>
+
+  <div id="status"></div>
+
+  <p>This extension has been created free of charge by <a href="https://twitter.com/GVRV" target="_blank">Gaurav Dadhania</a>, a freelance web developer. Please feel free to contact me for any payment integration consulting.</p>
+
+  <script src="options.js"></script>
+</body>
+</html>
